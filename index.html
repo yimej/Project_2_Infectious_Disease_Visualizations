@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Dengue Cases Visualization</title>
+	<title>West Nile Virus Cases Visualization</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
@@ -14,36 +14,45 @@
 
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<div class = "container-fluid">
 		<div class = "jumbotron text-center">
-			<h1>Dengue Case Reports Year 1 - Year 10</h1>
+			<h1>West Nile Virus Case Reports: 2007 - 2017</h1>
 		</div>
 		<hr>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  			<a class="navbar-brand" href="#">Navbar</a>
-  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  			</button>
-  			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    			<div class="navbar-nav">
-      				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      				<a class="nav-item nav-link" href="chloropleth.html">Interactive Map</a>
-      				<a class="nav-item nav-link" href="bar_charts.html">Bar Charts</a>
-    			</div>
-  			</div>
-		</nav>
+		<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand logo" href="index.html">
+				<span class="nav-color">Project Information</span></a>
+			</div>
+			<div class="nav navbar-nav navbar-right">
+					<li><a href="choropleth.html">Interactive Map</a></li>
+					<li><a href="bar_chart.html">Bar Chart</a></li>
+					<li><a href="line.html">Line Graph</a></li>
+					<li><a href="data.html">Data</a></li>
+				
+			</div>
+		</div>
+	</nav>
 		<br>
 		<div class = "col-md-12">
+			<h3>Project Information:</h3>
+			<p>Welcome to a visualization website for the case reports of West Nile Virus in the United States, from 2007 - 2017.  As you will see, there is an interactive map of the United States, which shows the number of cases in each state, incremented by year.  There is also a bar chart that shows the number of total cases per state in the ten year reporting period, along with a pie chart which shows how much each state contributes to the overall case number for the country.</p>
+			<p>If you are unfamiliar with West Nile Virus, please read below for some basic information regarding the disease and its impact on society.</p>
 			<div class = "col-md-6">
-				<img src="########">
+				<img src="https://images.medicinenet.com/images/slideshow/west-nile-virus-s1a-photo-of-tem-and-culex-mosquito.jpg" alt="West Nile Virus">
 			</div>
 			<div class = "col-md-6">
-				<img src="########">
+				<img border="0" height="340" src="http://s3.hubimg.com/u/3568386_f520.jpg" width="420">
 			</div>
 		<div class = "col-md-12">
-			<p>text here text here text here text here about virus, cases, important info, text here, text here, text here</p>
+			<h3>West Nile Virus Information:</h3>
+			<p>Lorem ipsum dolor sit amet, te sint invidunt laboramus mei. Duis tantas complectitur et usu, ad timeam scribentur necessitatibus sea, et has soluta dictas suavitate. Duis possit suscipiantur te vim. Ad quo veri viderer adolescens. Ius ad meis bonorum, etiam erant id pro. Est quas utroque ad. No per fabulas accumsan, detraxit cotidieque an eam.
+
+			Minim iracundia incorrupte et eam, vel dolorem tincidunt consectetuer ei. Ea amet inermis voluptatum per. Quod liber convenire ex est, purto dolorem vim at. Eum etiam velit complectitur ea, ne qui everti gloriatur assueverit, ne mei zril dolore. Stet erroribus ne quo, sit et omnes tation gloriatur, ut odio esse maiestatis mea.</p>
 		</div>
 	</div>
 </body>
