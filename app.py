@@ -11,8 +11,9 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 Disease_Data = Base.classes.disease_data
+State_Totals = Base.classes.state_totals 
 
-session = Session (engine)
+session = Session(engine)
 
 app = Flask(__name__)
 
@@ -30,11 +31,16 @@ def cases():
 	results=[]
 	for row in data:
 		if Disease_Data.State[i] != Disease_Data.State[i+1]:
-			results.append({Disease_Data.State[i]: CountValue[i],EndDate[i]})
+			results.append({Disease_Data.State[i]: EndDate[i], Disease_Data.CountValue[i]})
 		else:
 			next row
 		return jsonify(results)
 
+@app.route("/api.v1.0/case_totals")
+def totals():
+	response = session.query(state_totals.state, state_totals.count)
+	stats = list(np.ravel(response))
+	return jsonify (stats)
 
 
 
