@@ -10,8 +10,7 @@ engine = create_engine("sqlite://data.sqlite")
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
-Disease_Data = Base.classes.disease_data
-State_Totals = Base.classes.state_totals 
+Disease_Data = Base.classes.disease_data 
 
 session = Session(engine)
 
@@ -28,17 +27,12 @@ def home():
 
 @app.route("/api.v1.0/Cases_per_year")
 def cases():
-	results=[]
-	for row in data:
-		if Disease_Data.State[i] != Disease_Data.State[i+1]:
-			results.append({Disease_Data.State[i]: EndDate[i], Disease_Data.CountValue[i]})
-		else:
-			next row
-		return jsonify(results)
+	results = session.query({disease_data.State : [disease_data.Cases_2010,disease_data.Cases_2011,disease_data.Cases_2012,disease_data.Cases_2013,disease_data.Cases_2014,disease_data.Cases_2015,disease_data.Cases_2016, disease_data.Cases_2017]}) 
+	return jsonify(results)
 
 @app.route("/api.v1.0/case_totals")
 def totals():
-	response = session.query(state_totals.state, state_totals.count)
+	response = session.query(disease_data.State, disease_data.Total_By_State)
 	stats = list(np.ravel(response))
 	return jsonify (stats)
 
