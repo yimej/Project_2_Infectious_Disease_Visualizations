@@ -1,9 +1,7 @@
-var file = 'cleaned_westnile_dataset.csv';
-
 makePlot();
 
 function makePlot() {
-  d3.csv(file, function(data){makeLine(data)});
+  d3.csv(line_dataset, function(data){makeLine(data)});
 };
 
 function makeLine(dataset) {
@@ -12,8 +10,8 @@ function makeLine(dataset) {
 
   for (var i = 0; i < dataset.length - 1; i++) {
     row = dataset[i];
-    x.push(row['State']);
-    y.push(row['TotalByState']);
+    x.push(row['Year']);
+    y.push(row['Total']);
   }
 
   var trace = {

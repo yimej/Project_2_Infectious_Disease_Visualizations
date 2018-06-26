@@ -1,4 +1,4 @@
-var file = 'cleaned_westnile_dataset.csv';
+var file = 'cleaned_dataset.csv';
 
 makePlot();
 
