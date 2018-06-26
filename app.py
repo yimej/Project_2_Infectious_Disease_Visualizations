@@ -29,45 +29,45 @@ def home():
 
 @app.route("/api.v1.0/Cases_per_year")
 def cases():
-	Cases_10 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2010})
-	Cases_10.append(results_10) 
+	WNV_10 = []	
+	results_10 = session.query({disease_data.State : disease_data.Cases_2010, Rate_2010})
+	WNV_10.append(results_10) 
 	print(Cases_10)
 
-	Cases_11 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2011})
-	Cases_10.append(results_11) 
-	print(Cases_11)
+	WNV_11 = []	
+	results_11 = session.query({disease_data.State : disease_data.Cases_2011, Rate_2011})
+	WNV_11.append(results_11) 
+	print(WNV_11)
 
-	Cases_12 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2012})
-	Cases_10.append(results_12) 
-	print(Cases_12)
+	WNV_12 = []	
+	results_12 = session.query({disease_data.State : disease_data.Cases_2012, Rate_2012})
+	WNV_12.append(results_12) 
+	print(WNV_12)
 
-	Cases_13 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2013})
-	Cases_10.append(results_13) 
-	print(Cases_13)
+	WNV_13 = []	
+	results_13 = session.query({disease_data.State : disease_data.Cases_2013, Rate_2013})
+	WNV_13.append(results_13) 
+	print(WNV_13)
 
-	Cases_14 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2014})
-	Cases_10.append(results_14) 
-	print(Cases_14)
+	WNV_14 = []	
+	results_14 = session.query({disease_data.State : disease_data.Cases_2014, Rate_2014})
+	WNV_14.append(results_14) 
+	print(WNV_14)
 
-	Cases_15 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2015})
-	Cases_10.append(results_15) 
-	print(Cases_15)
+	WNV_15 = []	
+	results_15 = session.query({disease_data.State : disease_data.Cases_2015, Rate_2015})
+	WNV_15.append(results_15) 
+	print(WNV_15)
 
-	Cases_16 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2016})
-	Cases_10.append(results_16) 
-	print(Cases_16)
+	WNV_16 = []	
+	results_16 = session.query({disease_data.State : disease_data.Cases_2016, Rate_2016})
+	WNV_16.append(results_16) 
+	print(WNV_16)
 
-	Cases_17 = []	
-	results_10 = session.query({disease_data.State : disease_data.Cases_2017})
-	Cases_10.append(results_17) 
-	print(Cases_17)
+	WNV_17 = []	
+	results_17 = session.query({disease_data.State : disease_data.Cases_2017, Rate_2017})
+	WNV_10.append(results_17) 
+	print(WNV_17)
 
 	return jsonify(results)
 
@@ -87,8 +87,9 @@ def combine():
 		with open ("test.json") as f:
 			data=json.load(f)
 
-			if data.properties.State == Cases_1[i].State:
-				data.feature.properties.case_rate = Cases_1[i].Cases_[i]
+			if data.properties.name == WNV_1[i].State:
+				data.feature.properties.case_num = WNV_1[i].Cases_201[i]
+				data.feature.properties.case_rate = WNV_1[i].Rate_201[i]
 			else:
 				print("Not a match")
 
