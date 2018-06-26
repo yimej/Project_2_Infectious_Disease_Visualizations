@@ -1,9 +1,7 @@
-var file = 'cleaned_dataset.csv';
-
 makePlot();
 
 function makePlot() {
-  d3.csv(file, function(data){makeBar(data)});
+  d3.csv('cleaned_dataset.csv', function(data){makeBar(data)});
 };
 
 function makeBar(dataset) {

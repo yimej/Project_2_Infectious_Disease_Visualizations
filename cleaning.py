@@ -18,8 +18,7 @@ states_df.rename(columns={0:'State'}, inplace=True)
 template_df = pd.DataFrame(states)
 template_df.rename(columns={0:'State'}, inplace=True)
 
-yearly = pd.read_csv('yearlycensus.csv')
-USpop = yearly.loc[0,'CENSUS2010POP']
+USpop = 308745538
 
 finalyear = df['Start'].iloc[-1]
 finalyear = int(finalyear[0:4])
