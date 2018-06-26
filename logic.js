@@ -5,15 +5,15 @@ var myMap = L.map('map', {
 
 APIKEY = "pk.eyJ1Ijoic2NvdHRtY2FsaXN0ZXIxMyIsImEiOiJjamlhdWd2bzMxYjU1M3Ztcm54N2kxaDQ2In0.mGtR6lttrtiEpIqHVEIAtQ"
 
-L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=" + APIKEY).addTo(myMap)
+L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=" + APIKEY).addTo(myMap);
 
-**COMBINE GEOJSON file**
+// **COMBINE GEOJSON file**
 
-var apiLINK = "combined Geojson.file"
+var apiLINK = "combined Geojson.file";
 
 var geojson;
 
-funciton getColor(d){
+function getColor(d){
 	return d > 200 ? '#80026':
 		   d > 100 ? '#BD0026':
 		   d > 75 ? '#E31A1C':
