@@ -46,7 +46,7 @@
                                {
                                 var data_data = data.split(/\r?\n|\r/);
                                 var table_data = '<table class="table table-bordered table-striped">';
-                                for(var count = 0; count<data_data.length; count++)
+                                for(var count = 0; count<data_data.length-1; count++)
                                 {
                                  var cell_data = data_data[count].split(",");
                                  table_data += '<tr>';
