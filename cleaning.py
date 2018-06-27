@@ -42,6 +42,7 @@ for year in timerange:
 
     template_df = template_df.merge(cleaned_year_df, on='State', how='outer')
     merged_df = states_df.merge(template_df, on='State', how='left')
+    data_df = merged_df
 
 merged_df = merged_df.fillna(0)
 merged_df.set_index('State', inplace=True, drop=True)
@@ -60,3 +61,11 @@ line['Year'] = timerange
 line.set_index('Year', drop=True, inplace=True)
 line.rename(columns={'TotalByYear':'Total'}, inplace=True)
 line.to_csv('line_dataset.csv')
+
+#create csv for data.html
+data_df = data_df.fillna(0)
+data_df.set_index('State', inplace=True, drop=True)
+data_df.rename(columns = lambda x : str(x)[-4:], inplace=True)
+data_df['TotalByState'] = data_df.sum(axis=1)
+data_df.loc['TotalByYear'] = data_df.sum()
+data_df.to_csv('data_dataset.csv')
