@@ -43,7 +43,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2011 + "<br>Case Rate: " + feature.properties.Rate_2011)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2011 + "<br>Case Rate: " + feature.properties.Rate_2011)}
 		});
 	geojson_2=L.choropleth(data, {
 		valueProperty: "Cases_2011",
@@ -56,7 +56,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2012 + "<br>Case Rate: " + feature.properties.Rate_2012)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2012 + "<br>Case Rate: " + feature.properties.Rate_2012)}
 		});
 	geojson_3=L.choropleth(data, {
 		valueProperty: "Cases_2013",
@@ -69,7 +69,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2013 + "<br>Case Rate: " + feature.properties.Rate_2013)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2013 + "<br>Case Rate: " + feature.properties.Rate_2013)}
 		});
 	geojson_4=L.choropleth(data, {
 		valueProperty: "Cases_2014",
@@ -82,7 +82,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2014 + "<br>Case Rate: " + feature.properties.Rate_2014)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2014 + "<br>Case Rate: " + feature.properties.Rate_2014)}
 		});
 	geojson_5=L.choropleth(data, {
 		valueProperty: "Cases_2015",
@@ -95,7 +95,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2015 + "<br>Case Rate: " + feature.properties.Rate_2015)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2015 + "<br>Case Rate: " + feature.properties.Rate_2015)}
 		});
 	geojson_6=L.choropleth(data, {
 		valueProperty: "Cases_2016",
@@ -108,7 +108,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2016 + "<br>Case Rate: " + feature.properties.Rate_2016)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2016 + "<br>Case Rate: " + feature.properties.Rate_2016)}
 		});
 		geojson_7=L.choropleth(data, {
 		valueProperty: "Cases_2017",
@@ -121,7 +121,7 @@ d3.json(GEOLINK, function(data){
 			fillOpacity: .8
 		},
 		onEachFeature: function(feature, layer){
-			layer.bindPopup(feature.properties.NAME + "<br>Number of cases:<br>" + feature.properties.Cases_2017 + "<br>Case Rate: " + feature.properties.Rate_2017)}
+			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2017 + "<br>Case Rate: " + feature.properties.Rate_2017)}
 	});
 
 	var overlayMaps = {
