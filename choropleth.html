@@ -2,39 +2,38 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>West Nile Virus Data Visualization</title>
+    <title>West Nile Virus Case Reports Choropleth</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script type="text/javascript" src="choropleth.js"></script>
+    <script type="text/javascript" src="choropleth_1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
     <div class = "container-fluid">
       <div class = "jumbotron text-center">
-        <h1>Project Tycho</h1>
-        <h2>West Nile Virus Data Visualization from 2010 to 2017</h2>
+        <h1>West Nile Virus Case Reports: 2010 - 2017</h1>
       </div>
       <hr>
       <nav class="navbar navbar-default">
       <div class="container">
-        <div class="navbar-header">
+       <div class="navbar-header">
           <a class="navbar-brand logo" href="index.html">
-          <span class="nav-color">Home</span></a>
+          <span class="nav-color">Project Information</span></a>
         </div>
         <div class="nav navbar-nav navbar-right">
-          <li><a href="choropleth.html">Interactive Map</a></li>
-          <li><a href="bar_chart.html">Bar Chart</a></li>
-          <li><a href="line.html">Line Graph</a></li>
-          <li><a href="data.html">Data</a></li>
+            <li><a href="choropleth.html">Interactive Map</a></li>
+            <li><a href="bar_chart.html">Bar Chart</a></li>
+            <li><a href="line.html">Line Graph</a></li>
+            <li><a href="data.html">Data</a></li>
         </div>
       </div>
     </nav>
     <!-- The div where we will inject our map -->
     <div id="map"></div>
 
-    <script type="text/javascript" src="logic_choropleth.js"></script>
+    <script type="text/javascript" src="choropleth_1.js"></script>
 
   </body>
 </html>
