@@ -1,15 +1,13 @@
-var myMap = L.map('map', {
+var myMap = L.map("map", {
 	center: [39.8283, -98.5795],
 	zoom: 11
 });
 
-APIKEY = "pk.eyJ1Ijoic2NvdHRtY2FsaXN0ZXIxMyIsImEiOiJjamlhdWd2bzMxYjU1M3Ztcm54N2kxaDQ2In0.mGtR6lttrtiEpIqHVEIAtQ"
-
-L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=" + APIKEY).addTo(myMap)
+L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2NvdHRtY2FsaXN0ZXIxMyIsImEiOiJjamlhdWd2bzMxYjU1M3Ztcm54N2kxaDQ2In0.mGtR6lttrtiEpIqHVEIAtQ").addTo(myMap)
 
 
 
-var GEOLINK = "state_data_modified.json"
+var GEOLINK = "state_data_modified.geojson";
 
 var geojson_0;
 var geojson_1;
@@ -22,9 +20,9 @@ var geojson_7;
 
 d3.json(GEOLINK, function(data){
 	geojson_0=L.choropleth(data, {
-		ValueProperty: "Rate_2010",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2010",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -37,9 +35,9 @@ d3.json(GEOLINK, function(data){
 
 	});
 	geojson_1=L.choropleth(data,{
-		ValueProperty: "Rate_2011",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2011",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -51,9 +49,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});
 	geojson_2=L.choropleth(data,{
-		ValueProperty: "Rate_2012",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2012",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -65,9 +63,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});
 	geojson_3=L.choropleth(data,{
-		ValueProperty: "Rate_2013",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2013",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -79,9 +77,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});
 	geojson_4=L.choropleth(data,{
-		ValueProperty: "Rate_2014",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2014",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -93,9 +91,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});
 	geojson_5=L.choropleth(data,{
-		ValueProperty: "Rate_2015",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2015",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -107,9 +105,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});		
 	geojson_6=L.choropleth(data,{
-		ValueProperty: "Rate_2016",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2016",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
@@ -121,9 +119,9 @@ d3.json(GEOLINK, function(data){
 		}
 	});
 	geojson_7=L.choropleth(data,{
-		ValueProperty: "Rate_2017",
-		scale: ['#80026': 'FFEDA0']
-		steps: 8,
+		valueProperty: "Rate_2017",
+		scale: ['white', 'red']
+		steps: 5,
 		mode: "q",
 		style:{
 			color:'#fff'
