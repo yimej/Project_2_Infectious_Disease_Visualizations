@@ -20,9 +20,9 @@ var geojson_7;
 
 d3.json(GEOLINK, function(data){
 	geojson_0=L.choropleth(data, {
-		valueProperty: "Cases_2010",
+		valueProperty: "Rate_2010",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps:24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -33,9 +33,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2010 + "<br>Case Rate: " + feature.properties.Rate_2010)}
 		});
 	geojson_1=L.choropleth(data, {
-		valueProperty: "Cases_2011",
+		valueProperty: "Rate_2011",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -46,9 +46,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2011 + "<br>Case Rate: " + feature.properties.Rate_2011)}
 		});
 	geojson_2=L.choropleth(data, {
-		valueProperty: "Cases_2011",
+		valueProperty: "Rate_2011",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -59,9 +59,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2012 + "<br>Case Rate: " + feature.properties.Rate_2012)}
 		});
 	geojson_3=L.choropleth(data, {
-		valueProperty: "Cases_2013",
+		valueProperty: "Rate_2013",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -72,9 +72,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2013 + "<br>Case Rate: " + feature.properties.Rate_2013)}
 		});
 	geojson_4=L.choropleth(data, {
-		valueProperty: "Cases_2014",
+		valueProperty: "Rate_2014",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -85,9 +85,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2014 + "<br>Case Rate: " + feature.properties.Rate_2014)}
 		});
 	geojson_5=L.choropleth(data, {
-		valueProperty: "Cases_2015",
+		valueProperty: "Rate_2015",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -98,9 +98,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2015 + "<br>Case Rate: " + feature.properties.Rate_2015)}
 		});
 	geojson_6=L.choropleth(data, {
-		valueProperty: "Cases_2016",
+		valueProperty: "Rate_2016",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -111,9 +111,9 @@ d3.json(GEOLINK, function(data){
 			layer.bindPopup(feature.properties.NAME + "<br>Number of cases: " + feature.properties.Cases_2016 + "<br>Case Rate: " + feature.properties.Rate_2016)}
 		});
 		geojson_7=L.choropleth(data, {
-		valueProperty: "Cases_2017",
+		valueProperty: "Rate_2017",
 		scale: ['white', 'red'],
-		steps: 12,
+		steps: 24,
 		mode: "q",
 		style:{
 			color:'#fff',
@@ -145,7 +145,7 @@ d3.json(GEOLINK, function(data){
     	var labels = [];
 
     // Add min & max
-    var legendInfo = "<h1>Cases Reported Per Year</h1>" +
+    var legendInfo = "<h1>Case Rate per 100,000 people Reported Per Year</h1>" +
       "<div class=\"labels\">" +
         "<div class=\"min\">" + limits[0] + "</div>" +
         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
